@@ -1,13 +1,7 @@
 # Landing Page Project
 
-## Table of Contents
+Project #2: Landing Page
 
-* [Instructions](#instructions)
+Languages: 1. HTML 2. CSS 3. Javascript
 
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+Functions: 1. Nav 2. active-class 3. Scrolling 4. Go to Top 5. Section Collapse
