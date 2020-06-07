@@ -9,10 +9,10 @@ const navCreator = () => {
     let navUI = '';
     allSection.forEach(section => {
 
-        const sectionID = section.id;
-        const navData = section.dataset.nav;
+        const ID = section.id;
+        const navData = section.dataset.nav
 
-        navUI += '<li><a class= "menu__link" href="#$[sectionID]">${navData}</a></li>';
+        navUI += `<li><a class= "menu__link" href="#${ID}">${navData}</a></li>`;
 
     });
 
@@ -20,3 +20,16 @@ const navCreator = () => {
 };
 
 navCreator();
+
+/*Smooth Scrolling Effect*/
+const scroll_to = () => {
+    const links = document.querySelectorAll('.navbar__menu a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            for (let i = 0; i < sections; i++) {
+                sections[i].addEventListener('click', sectionScroll(link));
+            }
+        });
+    });
+};
+scroll_to();
