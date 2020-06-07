@@ -4,6 +4,7 @@ const allNav = document.getElementById('navbar__list');
 /*Section Global Variable*/
 const allSection = document.querySelectorAll('section');
 
+/* Create the Navigation Bar*/
 const navCreator = () => {
 
     let navUI = '';
@@ -22,14 +23,12 @@ const navCreator = () => {
 navCreator();
 
 /*Smooth Scrolling Effect*/
-const scroll_to = () => {
-    const links = document.querySelectorAll('.navbar__menu a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            for (let i = 0; i < sections; i++) {
-                sections[i].addEventListener('click', sectionScroll(link));
-            }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
-};
-scroll_to();
+});
