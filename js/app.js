@@ -1,10 +1,10 @@
-/*Navigation Global Variable*/
+//Navigation Global Variable
 const allNav = document.getElementById('navbar__list');
 
-/*Section Global Variable*/
+//Section Global Variable
 const allSection = document.querySelectorAll('section');
 
-/* Create the Navigation Bar*/
+//Create the Navigation Bar
 const navCreator = () => {
 
     let navUI = '';
@@ -22,7 +22,8 @@ const navCreator = () => {
 
 navCreator();
 
-/*Smooth Scrolling Effect*/
+
+//Smooth Scrolling Effect
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -32,3 +33,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+//Check For Active
+const activeSection =
+
+    const bounding = allSection.getBoundingClientRect();

@@ -236,7 +236,12 @@ section.your-active-class .landing__container::after {
 /*Custom CSS*/
 
 .navbar__menu {
-    background-color: green;
+    background-color: rgb(49, 223, 121);
+    text-decoration-color: black;
+}
+
+.focus {
+    border: 2px solid red;
 }
 
 
