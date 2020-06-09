@@ -35,6 +35,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 //Check For Active
-const activeSection =
-
-    const bounding = allSection.getBoundingClientRect();
