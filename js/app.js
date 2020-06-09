@@ -34,4 +34,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-//Check For Active
+
+//Remove Active Class
+const cutActive = (section) => {
+    section.classList.remove('your-active-class');
+};
+
+//Add Active
+const insertActive = (condition, section) => {
+    if (condition) {
+        section.classList.add('your-active-class');
+    };
+};
+
+const currentSection = () => {
+    allSection.forEach(section => {
+        const elementOffset = offset(section);
+
+        inviewport = () => elementOffset < 150 && elementOffset > -150;
+
+        cutActive(section);
+        insertActive(inviewport(), xection);
+    });
+};
+
+
+function myfunction(e) {
+    //check this
+    const myEl = document.querySelectorAll('.active');
+    [].forEach.call(myEl, function(el) {
+        //check this
+        el.classlist.remove('active');
+    });
+    //check this
+    e.target.className = 'active';
+}
+
+document.addEventListener('scroll', currentSection);

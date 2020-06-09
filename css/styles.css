@@ -240,6 +240,11 @@ section.your-active-class .landing__container::after {
     text-decoration-color: black;
 }
 
+.active {
+    background: #333;
+    color: #fff;
+}
+
 .focus {
     border: 2px solid red;
 }
