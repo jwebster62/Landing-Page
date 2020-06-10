@@ -71,18 +71,19 @@ section {
 /* Navigation Styles*/
 
 .navbar__menu ul {
+    padding: 3%;
     padding-left: 0;
     margin: 0;
     text-align: right;
 }
 
 .navbar__menu li {
-    display: inline-block;
+    display: inline-flex;
+    padding-left: 2%;
 }
 
 .navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
+    display: inline-flex;
     font-weight: bold;
     text-decoration: none;
     color: #000;

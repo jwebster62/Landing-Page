@@ -23,6 +23,41 @@ const navCreator = () => {
 navCreator();
 
 
+// getting largest value that is less than or equal to number
+const offset = (section) => {
+    return Math.floor(section.getBoundingClientRect().top);
+};
+
+
+//remove active class
+const clearActive = (section) => {
+    section.classList.remove('your-active-class');
+    section.classList.remove('focus');
+};
+
+//add active class
+const insertActive = (conditional, section) => {
+    if (conditional) {
+        section.classList.add('your-active-class');
+        section.classList.add('focus');
+    };
+};
+
+//implement actual function
+
+const activeSection = () => {
+    allSection.forEach(section => {
+        const elementOffset = offset(section);
+
+        inviewport = () => elementOffset < 150 && elementOffset >= -150;
+
+        clearActive(section);
+        insertActive(inviewport(), section);
+
+    });
+};
+
+window.addEventListener('scroll', activeSection);
 //Smooth Scrolling Effect
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -33,41 +68,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
-
-//Remove Active Class
-const cutActive = (section) => {
-    section.classList.remove('your-active-class');
-};
-
-//Add Active
-const insertActive = (condition, section) => {
-    if (condition) {
-        section.classList.add('your-active-class');
-    };
-};
-
-const currentSection = () => {
-    allSection.forEach(section => {
-        const elementOffset = offset(section);
-
-        inviewport = () => elementOffset < 150 && elementOffset > -150;
-
-        cutActive(section);
-        insertActive(inviewport(), xection);
-    });
-};
-
-
-function myfunction(e) {
-    //check this
-    const myEl = document.querySelectorAll('.active');
-    [].forEach.call(myEl, function(el) {
-        //check this
-        el.classlist.remove('active');
-    });
-    //check this
-    e.target.className = 'active';
-}
-
-document.addEventListener('scroll', currentSection);
