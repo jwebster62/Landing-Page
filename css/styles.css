@@ -241,13 +241,29 @@ section.your-active-class .landing__container::after {
     text-decoration-color: black;
 }
 
-.active {
-    background: #333;
-    color: #fff;
-}
-
 .focus {
     border: 2px solid red;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: White;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+#topButton:hover {
+    background-color: rgb(128, 30, 30);
+    border: none;
 }
 
 
