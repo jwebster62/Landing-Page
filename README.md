@@ -13,7 +13,6 @@ Project #2: Landing Page
 2. active-class 
 3. Scrolling 
 4. Go to Top 
-5. Section Collapse
 
 # Project Goals
 To build a landing page that changed dynamically based on the content that gets added to the page.
